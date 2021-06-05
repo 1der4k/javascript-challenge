@@ -25,4 +25,10 @@ var form = d3.select(".form-group")
 //Create event handler function
 function ufoFilter() {
     d3.event.preventDefault();
+
+    var inputElement = d3.select("#datetime");
+
+    var inputValue = inputElement.property("value");
+
+    
 }
