@@ -18,3 +18,11 @@ var button = d3.select("#filter-btn");
 
 // Set variable for form reference
 var form = d3.select(".form-group")
+
+// Create event handlers for button and pressing enter key
+
+
+//Create event handler function
+function ufoFilter() {
+    d3.event.preventDefault();
+}
