@@ -17,10 +17,11 @@ data.forEach((sighting) => {
 var button = d3.select("#filter-btn");
 
 // Set variable for form reference
-var form = d3.select(".form-group")
+var form = d3.select("#form")
 
 // Create event handlers for button and pressing enter key
-
+button.on("click",ufoFilter);
+form.on("submit",ufoFilter);
 
 //Create event handler function
 function ufoFilter() {
