@@ -13,3 +13,5 @@ data.forEach((sighting) => {
     });
 });
 
+var button = d3.select("#filter-btn");
+
