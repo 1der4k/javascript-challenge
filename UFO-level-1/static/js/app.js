@@ -13,5 +13,8 @@ data.forEach((sighting) => {
     });
 });
 
+// Set variable for button reference
 var button = d3.select("#filter-btn");
 
+// Set variable for form reference
+var form = d3.select(".form-group")
