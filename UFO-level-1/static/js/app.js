@@ -4,6 +4,7 @@ var tableData = data;
 // Set variable for table body reference
 var tbody = d3.select("tbody");
 
+// Table formatted and populated with data
 data.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
@@ -11,3 +12,4 @@ data.forEach((sighting) => {
         cell.text(value);
     });
 });
+
