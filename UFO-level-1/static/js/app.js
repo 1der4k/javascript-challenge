@@ -17,7 +17,7 @@ data.forEach((sighting) => {
 var button = d3.select("#filter-btn");
 
 // Set variable for form reference
-var form = d3.select("#form")
+var form = d3.select(".form-group")
 
 // Create event handlers for button and pressing enter key
 button.on("click",ufoFilter);
@@ -30,6 +30,8 @@ function ufoFilter() {
     var inputElement = d3.select("#datetime");
 
     var inputValue = inputElement.property("value");
+
+    console.log(inputValue)
 
     var filteredData = data.filter(sighting => sighting.datetime === inputValue);
 }
