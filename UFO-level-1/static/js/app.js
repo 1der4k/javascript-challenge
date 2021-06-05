@@ -31,7 +31,8 @@ function ufoFilter() {
 
     var inputValue = inputElement.property("value");
 
-    console.log(inputValue)
-
     var filteredData = data.filter(sighting => sighting.datetime === inputValue);
+
+    
+
 }
