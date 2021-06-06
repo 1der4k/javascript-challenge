@@ -4,7 +4,7 @@ var tableData = data;
 // Set variable for table body reference
 var tbody = d3.select("tbody");
 
-// Table formatted and populated with data
+// Function for creating table
 function createTable(data) {
     data.forEach((sighting) => {
     var row = tbody.append("tr");
@@ -24,6 +24,9 @@ var form = d3.select("#form")
 // Create event handlers for button and pressing enter key
 button.on("click",ufoFilter);
 form.on("submit",ufoFilter);
+
+// Build unfiltered table
+createTable(data)
 
 //Create event handler function
 function ufoFilter() {
