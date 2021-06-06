@@ -5,13 +5,15 @@ var tableData = data;
 var tbody = d3.select("tbody");
 
 // Table formatted and populated with data
-data.forEach((sighting) => {
+function createTable(data) {
+    data.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
         var cell = row.append("td");
         cell.text(value);
+        });
     });
-});
+};
 
 // Set variable for button reference
 var button = d3.select("#filter-btn");
