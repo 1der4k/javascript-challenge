@@ -39,14 +39,6 @@ function ufoFilter() {
 
     var filteredData = data.filter(sighting => sighting.datetime === inputValue);
 
-
-
-    filteredData.forEach((sighting) => {
-        var row = tbody.append("tr");
-        Object.entries(sighting).forEach(([key, value]) => {
-            var cell = row.append("td");
-            cell.text(value);
-        });
-    });
+    createTable(filteredData);
 
 }
