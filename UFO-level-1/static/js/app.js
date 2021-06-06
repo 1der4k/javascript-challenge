@@ -6,6 +6,7 @@ var tbody = d3.select("tbody");
 
 // Function for creating table
 function createTable(data) {
+    tbody.html("");
     data.forEach((sighting) => {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(([key, value]) => {
@@ -37,6 +38,8 @@ function ufoFilter() {
     var inputValue = inputElement.property("value");
 
     var filteredData = data.filter(sighting => sighting.datetime === inputValue);
+
+
 
     filteredData.forEach((sighting) => {
         var row = tbody.append("tr");
